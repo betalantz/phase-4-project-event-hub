@@ -4,11 +4,10 @@ import { FaCheck } from "react-icons/fa";
 
 
 // prettier-ignore
-const ThingToDo = ({ todo, event, user }) => {
+const ThingToDo = ({ todo, event, user, setRunFetch, runFetch  }) => {
     const [className, setClassName] = useState("");
 
     const completedTodo = {
-        id: todo.id,
         user_id: user.id,
         thing_to_do: todo.thing_to_do,
         completed: true,
@@ -16,19 +15,24 @@ const ThingToDo = ({ todo, event, user }) => {
     };
 
     function handleCompleted() {
+        
         fetch(`/todos/${todo.id}`, {
         method: "PATCH",
         headers: {
             "Content-Type": "application/json",
         },
         body: JSON.stringify(completedTodo),
-        }).then(setClassName("completed"))
+        }).then(resp => resp.json())
+        .then(setClassName("completed"))
+        .then(setRunFetch(!runFetch))
+        console.log(completedTodo)
     }
 
     return (
         <div className='thing-to-do'>
         {todo.completed ? (<li className='completed'>{todo.thing_to_do}</li>) : (<li className={className}>{todo.thing_to_do}</li>)}
-        <button className='check-btn'onClick={handleCompleted}><FaCheck /></button>
+
+        <button className='check-btn' onClick={() => handleCompleted(todo)}><FaCheck /></button>
         </div>
     );
     };

@@ -55,11 +55,11 @@
   justify-content: center;
   height: 2px;
   border-bottom: 2.75px solid #932432;
-  width: 56%;
+  width: 100%;
   left: 50%;
   margin-top: -20px;
-  position: absolute;
-  transform: translate(-50%, -60%);
+  /* position: absolute; */
+  /* transform: translate(-50%, -60%); */
   border-radius: 10px;
 }
 

@@ -13,15 +13,29 @@ himer = User.create(name: "himer", username: "himer", user_photo: "himer", passw
 schmitt = User.create(name: 'schmitt', username: 'schmitt', user_photo: 'q22342342422342', password: 'schmitt')
 jack = User.create(name: 'jack', username: 'jack1', user_photo: 'q22342342422342', password: 'poop1')
 
+
+
+john = User.create(name: 'john', username: 'john123', user_photo: 'q22342342', password: 'poop')
+jacob = User.create(name: 'jacob', username: 'jacob1', user_photo: 'q22342342422342', password: 'poopy')
+ivan = User.create(name: 'jingle', username: 'jingle', user_photo: 'q22342342422342', password: 'jingle')
+chelsea = User.create(name: "himer", username: "himer", user_photo: "himer", password: "himer")
+steve = User.create(name: 'schmitt', username: 'schmitt', user_photo: 'q22342342422342', password: 'schmitt')
+joe = User.create(name: 'jack', username: 'jack1', user_photo: 'q22342342422342', password: 'poop1')
+emily 
+tarric = 
+
+
+
+
+
+
+
+
 event1 = Event.create(title: "Johns bday", description: "LETS GET FUCKED UP", date: DateTime.now(), category:"Dinner", start_time:"1:00", end_time:"never", user_id: john.id)
-comment1 = Comment.create(comment: "this place sucks", user_id: john.id, event_id: event1.id)
 
 friendship1 = Friendship.create(:friend_a_id => john.id, :friend_b_id => jacob.id)
-
 friendship2 = Friendship.create(:friend_a_id => john.id, :friend_b_id => jack.id)
-
 friendship3 = Friendship.create(:friend_a_id => jacob.id, :friend_b_id => himer.id)
-
 friendship4 = Friendship.create(:friend_a_id => jacob.id, :friend_b_id => jack.id)
 
 

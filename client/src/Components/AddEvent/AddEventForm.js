@@ -37,7 +37,7 @@ const AddEventForm = ({setModalIsOpen, events, setEvents}) => {
           } else {
             resp.json().then((err) => setErrors(err.errors))
           }
-        });
+        })
       }
 
 

@@ -4,8 +4,6 @@ import Avatar from 'react-avatar'
 
 const EventFriend = ({friend, handleInviteFriend, attendees, setAttendees, event, user}) => {
 
-
-
     const newAttendee = {
         name: friend.name,
         user_id: user.id,
@@ -13,7 +11,6 @@ const EventFriend = ({friend, handleInviteFriend, attendees, setAttendees, event
     }
 
     function handleInviteFriend(){
-
         fetch("/attendees", {
             method: "POST",
             headers: {
@@ -21,20 +18,19 @@ const EventFriend = ({friend, handleInviteFriend, attendees, setAttendees, event
             },
             body: JSON.stringify(newAttendee),
         }).then(setAttendees([...attendees, newAttendee]))
-        
     }
 
 
 
     return (
         <div className='attendee-list'>
-                          <Avatar
-                        round={true}
-                        size={50}
-                        className="search-avatar-photo"
-                        name={friend.name}
-                        color="lightGrey"
-                    />
+            <Avatar
+                round={true}
+                size={50}
+                className="search-avatar-photo"
+                name={friend.name}
+                color="lightGrey"
+            />
             <p>{friend.name}</p>
             <button onClick={() => handleInviteFriend()}className='invite-friend-btn'>Invite</button>
         </div>

@@ -4,15 +4,16 @@ import { FaPlus } from "react-icons/fa";
 // prettier-ignore
 const ToDoForm = ({inputText,setInputText,todos,setToDos,event,user,} ) => {
     
-    const newTodo = {
-        id: todos.id,
-        user_id: user.id,
-        thing_to_do: inputText,
-        completed: false,
-        event_id: event.id,
-    };
 
     function submitTodo(e) {
+
+        const newTodo = {
+            user_id: user.id,
+            thing_to_do: inputText,
+            completed: false,
+            event_id: event.id,
+        };
+
         e.preventDefault();
         fetch("/todos", {
             method: "POST",
@@ -20,7 +21,8 @@ const ToDoForm = ({inputText,setInputText,todos,setToDos,event,user,} ) => {
                 "Content-Type": "application/json",
             },
             body: JSON.stringify(newTodo),
-        }).then(setToDos([...todos, newTodo]))
+        }).then(resp => resp.json())
+        .then(setToDos([...todos, newTodo]))
     }
 
     return (

@@ -46,7 +46,6 @@ const Budget = ({event, user}) => {
 
     return (
         <div>
-            <h1>Budget</h1>
             <button>Add Target Budget</button>
             <button>Contribute</button>
             <div className='budget-forms'>

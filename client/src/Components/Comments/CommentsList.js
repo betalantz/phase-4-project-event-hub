@@ -6,7 +6,6 @@ const CommentsList = ({ commentResults }) => {
     
     return (
         <div>
-            <h1>Comments</h1>
         {commentResults.map(comment => {
             return (
                 

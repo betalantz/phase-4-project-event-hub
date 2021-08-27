@@ -16,16 +16,16 @@ function App() {
     // auto-login
     fetch("/me").then((resp) => {
       if (resp.ok) {
-        resp.json().then((user) => setUser(user));
+        resp.json().then((user) => setUser(user))
       }
-    });
-  }, []);
+    })
+  }, [])
 
-  if (!user) return <LoginPage onLogin={setUser} />;
+  if (!user) return <LoginPage onLogin={setUser} />
 
   return (
     <>
-      <Navbar user={user} setUser={setUser} />;
+      <Navbar user={user} setUser={setUser} />
       <main>
         <Switch>
           <Route path="/" exact>

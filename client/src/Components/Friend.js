@@ -1,4 +1,4 @@
-import Avatar from 'react-avatar'
+import Avatar, { ConfigProvider } from 'react-avatar';
 
 
 const Friend = ({ friend, setFriends, allFriends }) => {
@@ -14,14 +14,15 @@ const Friend = ({ friend, setFriends, allFriends }) => {
 
   return (
     <div className='friend-card-div'>
-      <Avatar
-          round={true}
-          size={50}
-          className="search-avatar-photo"
-          name={friend.name}
-          color="lightGrey"
+      <ConfigProvider colors={['pink', 'orange', 'black', 'green', 'red','lightBlue']}>
+                <Avatar
+                        round={true}
+                        size={50}
+                        className="search-avatar-photo"
+                        name={friend.name}
       />
-      <h1>{friend.username}</h1>
+      </ConfigProvider>
+      <h1 className='friends-list-username'>{friend.username}</h1>
       <button className='remove-friend-btn' onClick={() => handleDeleteFriend(friend)}>Unfriend {friend.name}</button>
     </div>
   );

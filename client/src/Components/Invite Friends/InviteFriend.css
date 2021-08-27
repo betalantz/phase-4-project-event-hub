@@ -3,8 +3,8 @@
 }
 
 .invite-friend-btn{
-    background: black;
-    color: rgb(255, 255, 255);
+
+    color: #283747;
     border: none;
     padding: 10px;
     font-weight: bold;
@@ -13,6 +13,9 @@
     cursor: pointer;
     outline: inherit;
     margin-left: 10px;
+}
+.invite-friend-btn:hover{
+    color:green;
 }
 
 .event-friends-list{
@@ -27,7 +30,7 @@
 
 
 .view-friend-btn{
-    background: black;
+    background: #3C1874;
     color: rgb(255, 255, 255);
     border: none;
     padding: 10px;
@@ -37,4 +40,24 @@
     cursor: pointer;
     outline: inherit;
     margin-left: 10px;
+}
+
+.attending-header{
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+.attendee-list-names{
+    padding: 20px;
+    display: grid;
+    flex-wrap: wrap;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: auto;
+    grid-gap: 1rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.attendee-name-li{
+    text-align: center;
+    text-transform: capitalize;
 }

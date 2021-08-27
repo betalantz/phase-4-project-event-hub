@@ -5,8 +5,7 @@ const ToDoList = ({ todos, event, user }) => {
     <div className="todo-container">
       <ul className="todo-list">
         {todos.map((todo) => {
-          console.log("ToDoList Component", todo);
-          return <ThingToDo todo={todo} event={event} user={user} />;
+          return <ThingToDo key={todo.name} todo={todo} event={event} user={user} />;
         })}
       </ul>
     </div>

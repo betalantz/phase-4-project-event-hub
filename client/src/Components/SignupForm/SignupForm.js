@@ -49,7 +49,7 @@ const SignupForm = ({ onLogin, setShowLogin, showLogin }) => {
         <form onSubmit={handleSubmit}>
           
     <div>
-      <label id="signup-label"><FaUserAlt id="signupform-icon" /> Name</label>
+      <label id="signup-label"><FaUserAlt id="signupform-icon" /> Name(Full Name)</label>
       <input
         className="name-signup-input"
         type="text"

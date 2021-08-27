@@ -1,0 +1,44 @@
+.friend-event-card{
+    padding: 10px;
+    background-color: #FDFEFF;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 50px;
+    padding: 25px;
+    box-shadow: 0 6px 10px -2px rgba(112, 112, 112, 0.9);
+    max-height: auto;
+    width: 40%;
+    text-transform: capitalize;
+}
+
+.friend-event-title{
+    margin-top:0px;
+    font-size:2.5rem;
+    margin-bottom:0px;
+}
+
+.friend-event-category{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.friend-event-date{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+}
+
+.friend-event-container{
+    margin-bottom:100px;
+}
+
+.friend-event-card-detail-line{
+    justify-content: center;
+    height: 2px;
+    border-bottom: 2.75px solid #932432;
+    width: 100%;
+    left: 25%;
+    margin-top: 3px;
+    /* transform: translate(-50%, -60%); */
+    border-radius: 10px;
+}

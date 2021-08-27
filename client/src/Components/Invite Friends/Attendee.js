@@ -1,8 +1,8 @@
 const Attendee = ({attendee}) => {
     return (
-        <div>
+        <li className='attendee-name-li'>
             {attendee.name}
-        </div>
+        </li>
     )
 }
 

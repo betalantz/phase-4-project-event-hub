@@ -11,19 +11,21 @@
   
   .nav-link:hover {
     --d: 100%;
-    color:#ec3a58;
+    color:red;
   }
 
 nav {
-    height: 12vh;
-    /* background-color: black; */
+    display: flex;
+    height: 15vh;
+    background-color: #FDFEFF;
+    box-shadow: 0 6px 10px -2px rgba(112, 112, 112, 0.9);
 }
 
 .nav-links {
     display: flex;
     list-style: none;
     width: 50%;
-    height:100%;
+    height:60%;
     justify-content: flex-end;
     align-items: center;
     margin-left: auto;
@@ -31,9 +33,9 @@ nav {
 }
 
 .nav-links a {
-    color: black;
+    color:#283747;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 1.4rem;
     font-family: 'Archivo Black', sans-serif;
     font-family: 'Open Sans', sans-serif;
     line-height: 100%;
@@ -44,64 +46,36 @@ nav {
 }
 
 
+.logout-btn{
+    font-size: 1rem;
+    position: absolute;
+    margin-top:50px;
+    margin-left:-35px;
+    background-color: #3C1874;
+    color: inherit;
+    border: none;
+    padding: 5px;
+    width: 120px;
+    border-radius: 10px;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+    color: white;
+ 
+  }
+
+  .avatar-photo-nav{
+      cursor: pointer;
+  }
+
+  .caret{
+      position: absolute; 
+      height: 100px;
+      margin-top:-4px;
+      margin-left:17px;
+      color: #3C1874;
+
+  }
 
 
 
-
-@media screen and (max-width: 768px){
-
-    .line1, .line2, .line3{
-        width: 30px;
-        height: 3px;
-        background: white;
-        margin: 5px;
-        transition: all 0.8s ease;
-    }
-    
-        nav {
-            position: relative;
-        }
-
-    .nav-links {
-        position: fixed;
-        background-color: black;
-        height: 100vh;
-        width: 100%;
-        flex-direction: column;
-        clip-path: circle(100px at 100% -30%);
-        -webkit-clip-path: circle(100px at 90% -10%);
-        transition: all .8s ease-out;
-        pointer-events: none;
-    }
-
-    .nav-links.open{
-        clip-path: circle(100px at 90% -10%);
-        -webkit-clip-path: circle(1000px at 90% -10%);
-        transition: all 1s ease-out;
-        pointer-events: all;
-    }
-
-    .hamburger{
-        position: absolute;
-        cursor: pointer;
-        right: 5%;
-        top: 50%;
-        transform: translate(-5%, -50%);
-        z-index: 2;
-    }
-
-
-    .rotate .line1{
-        transform: rotate(-45deg) translate(-5px,6px)
-    }
-
-    .rotate .line2{
-        opacity: 0;
-    }
-
-    .rotate .line3{
-        transform: rotate(45deg) translate(-5px,-6px)
-
-    }
-
-}

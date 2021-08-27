@@ -11,8 +11,8 @@ const AttendeeList = ({attendees, setAttendees}) => {
 
     return (
         <div>
-            <h2>Attending</h2>
-            {attendeeList}
+            <h2 className='attending-header'>Attending</h2>
+            <div className='attendee-list-names'>{attendeeList}</div>
         </div>
     )
 }

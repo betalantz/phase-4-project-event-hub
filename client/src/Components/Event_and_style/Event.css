@@ -10,12 +10,12 @@
   margin: auto;
   margin-top: 50px;
   width: 80%;
+  margin-bottom:100px;
 }
 
 .event-card {
   padding: 10px;
-  background-color: rgb(247, 247, 247);
-  width: 50%;
+  background-color: #FDFEFF;
   border-radius: 10px;
   margin: auto;
   margin-top: 50px;
@@ -23,14 +23,58 @@
   padding: 25px;
   box-shadow: 0 6px 10px -2px rgba(112, 112, 112, 0.9);
   max-height: auto;
-  max-width: auto;
-  min-width: 80%;
+  width: 70%;
 }
 
 .view-event-icon {
-  height: 12px;
+  height: 10px;
+  color: #932432;
+  margin-bottom:0px;
 }
 
 .view-container {
   cursor: pointer;
+}
+
+
+.event-card-title{
+  font-size:2.2rem;
+  margin-top:10px;
+  color: #283747;
+}
+
+.event-card-date{
+  color: #283747;
+}
+
+.event-card-view-details{
+  color: #283747;
+}
+
+.event-card-line{
+  justify-content: center;
+  height: 2px;
+  border-bottom: 2.75px solid #932432;
+  width: 56%;
+  left: 50%;
+  margin-top: -20px;
+  position: absolute;
+  transform: translate(-50%, -60%);
+  border-radius: 10px;
+}
+
+
+.event-list-line{
+  border-bottom: 3px solid #932432;
+  justify-content: center;
+  margin: auto;
+  width: 55%;
+  padding: 10px;
+}
+
+.event-list-header{
+  font-size: 3rem;
+  margin-bottom:0px;
+  color: #283747;
+  text-align:center;
 }

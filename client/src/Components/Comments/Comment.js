@@ -1,7 +1,7 @@
 const Comment = ({comment}) => {
     return (
         <div>
-            <h1>{comment}</h1>
+            <h1 className='comment'>{comment}</h1>
         </div>
     )
 }

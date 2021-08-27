@@ -3,16 +3,15 @@ import FriendEvent from './FriendEvent'
 
 const FriendEventList = ({friendsEvents}) => {
 
-
-    const allFriends = friendsEvents.map(friend => {
+    const allFriends = friendsEvents.map(event => {
         return (
 
-            <FriendEvent key={friend.id} friend={friend.events}/>
+            <FriendEvent key={event.id} names={friendsEvents} friend={event.events}/>
         )
     })
 
     return (
-        <div>
+        <div className='friend-event-container'>
             {allFriends}
         </div>
     )

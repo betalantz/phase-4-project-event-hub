@@ -63,7 +63,7 @@ const LoginForm = ({ onLogin }) => {
         </div>
         <div>
           <button type="submit" className="login-btn">
-            Log in
+            Login
           </button>
         </div>
         {errors ? (<div>

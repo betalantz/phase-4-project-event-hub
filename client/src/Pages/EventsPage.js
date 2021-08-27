@@ -5,8 +5,8 @@ import AddEventForm from "../Components/AddEvent/AddEventForm";
 import EventList from "../Components/Event_and_style/EventList";
 
 const EventsPage = ({ user }) => {
-  const [modalIsOpen, setModalIsOpen] = useState(false);
   const [events, setEvents] = useState([]);
+  const [modalIsOpen, setModalIsOpen] = useState(false);
 
   function openModal() {
     setModalIsOpen(true);
@@ -30,9 +30,6 @@ const EventsPage = ({ user }) => {
         Add Event
       </button>
 
-      <h1>Upcoming Events</h1>
-      <h1></h1>
-      <h1>Archived</h1>
 
       <Modal
         isOpen={modalIsOpen}

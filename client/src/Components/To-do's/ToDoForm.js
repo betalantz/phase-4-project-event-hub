@@ -5,6 +5,7 @@ import { FaPlus } from "react-icons/fa";
 const ToDoForm = ({inputText,setInputText,todos,setToDos,event,user,} ) => {
     
     const newTodo = {
+        id: todos.id,
         user_id: user.id,
         thing_to_do: inputText,
         completed: false,
@@ -24,15 +25,15 @@ const ToDoForm = ({inputText,setInputText,todos,setToDos,event,user,} ) => {
 
     return (
         <form onSubmit={(e) => submitTodo(e)}>
-        <input
-            placeholder="Enter a todo..."
-            type="text"
-            className="to-do-input"
-            onChange={(e) => setInputText(e.target.value)}
-        />
-        <button class="todo-btn" type="submit">
-            <FaPlus />
-        </button>
+            <input
+                placeholder="Enter a todo..."
+                type="text"
+                className="to-do-input"
+                onChange={(e) => setInputText(e.target.value)}
+            />
+            <button className="todo-btn" type="submit">
+                <FaPlus />
+            </button>
         </form>
     );
 };

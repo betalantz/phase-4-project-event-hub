@@ -1,4 +1,6 @@
 import { useState } from 'react'
+import { FaPlus } from "react-icons/fa";
+
 
 const AddCommentForm = ({ user, event, setCommentResults, commentResults }) => {
     const [comment, setComment] = useState("");
@@ -37,7 +39,7 @@ const AddCommentForm = ({ user, event, setCommentResults, commentResults }) => {
 
 
           <button className="add-comment-btn" type="submit">
-            Add
+            <FaPlus />
           </button>
         </form>
 

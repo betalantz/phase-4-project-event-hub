@@ -8,6 +8,7 @@ const ThingToDo = ({ todo, event, user }) => {
     const [className, setClassName] = useState("");
 
     const completedTodo = {
+        id: todo.id,
         user_id: user.id,
         thing_to_do: todo.thing_to_do,
         completed: true,
@@ -15,7 +16,6 @@ const ThingToDo = ({ todo, event, user }) => {
     };
 
     function handleCompleted() {
-        
         fetch(`/todos/${todo.id}`, {
         method: "PATCH",
         headers: {
@@ -23,7 +23,6 @@ const ThingToDo = ({ todo, event, user }) => {
         },
         body: JSON.stringify(completedTodo),
         }).then(setClassName("completed"))
-
     }
 
     return (

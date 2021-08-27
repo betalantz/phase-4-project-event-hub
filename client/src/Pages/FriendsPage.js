@@ -1,7 +1,10 @@
 import Friends from "../Components/Friends"
 import Avatar from 'react-avatar'
 import { useState,useEffect } from 'react'
-import { FaChevronDown } from "react-icons/fa";
+import Modal from "react-modal";
+import Aos from 'aos'
+import 'aos/dist/aos.css'
+
 
 
 const FriendsPage = ({user}) => {
@@ -9,12 +12,25 @@ const FriendsPage = ({user}) => {
     const [friends, setFriends] = useState([]);
     const [friendResults, setFriendResults] = useState([])
     const [errors, setErrors] = useState([]);
+    const [modalIsOpen, setModalIsOpen] = useState(false);
+
+    function openModal() {
+      setModalIsOpen(true);
+    }
+  
+    function closeModal() {
+      setModalIsOpen(false);
+    }
 
     useEffect(() => {
       fetch("/friendships")
         .then((resp) => resp.json())
         .then((data) => setFriends(data));
     }, []);
+
+    useEffect(() => {
+      Aos.init()
+  }, [])
 
     
     function findFriend(e){
@@ -39,16 +55,28 @@ const FriendsPage = ({user}) => {
             } else {
               resp.json().then((err) => setErrors(err.errors))
             }
+            closeModal()
           });
     }
 
 
     return (
         <div>
+            <h1 className="events-page-header">FRIENDS</h1>
+            <button className="add-event-btn" onClick={openModal}>
+              Add Friends
+            </button>
+            <Modal
+              isOpen={modalIsOpen}
+              onRequestClose={closeModal}
+              className="Modal"
+              overlayClassName="Overlay"
+              ariaHideApp={false}
+            >
             <div className="search-div">
-            <h1>Search for friends <FaChevronDown className='chevron-down-search'/></h1>
+            <h1 className='search-for-friends-header'>Search for friends</h1>
                 <input
-                className='search-input'
+                className='search-for-friend-input'
                 type="search"
                 placeholder="Search by username"
                 onChange={findFriend}
@@ -70,19 +98,14 @@ const FriendsPage = ({user}) => {
                 )
                 })) : (null)}
                 </div>
+ 
+            </Modal>
 
-              {/* <div>
-              {errors.map((err) => (
-                <div className="login-errors" key={err}>
-                  {err}
-                </div>
-              ))}
-            </div> */}
-
-        
-            <h1 className='friends-list-header'>Friends List</h1>
+            <div data-aos='fade-up' data-aos-duration='2000' data-aos-easing="ease-in-out">
+            <div className='friends-list-div'>
             <Friends friends={friends} setFriends={setFriends}/>
-
+            </div>
+            </div>
         </div>
     )
 }

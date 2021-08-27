@@ -22,7 +22,6 @@ const InviteFriends = ({ event, user }) => {
 
     return (
         <>
-        <h1>Invite Friends <FaChevronDown/></h1>
         <button className='view-friend-btn' onClick={() => setShowInviteFriendsComponent(!showInviteFriendsComponent)}>View Friends</button>
         {showInviteFriendsComponent ? (<InviteFriendsList event={event} user={user} attendees={attendees} setAttendees={setAttendees}
         />) : (null)}

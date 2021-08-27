@@ -7,6 +7,11 @@ class CommentsController < ApplicationController
         render json: comments
     end
 
+    def show
+        comment = Comment.where(event_id: params[:id])
+        render json: comment, status: :ok
+    end
+
     def create
         comment = Comment.create!(comment_params)
         render json: comment, status: :created

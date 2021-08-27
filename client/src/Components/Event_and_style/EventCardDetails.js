@@ -20,7 +20,7 @@ const EventCardDetails = ({ event, user, setShowDetails }) => {
 
 
   useEffect(() => {
-    fetch("/comments")
+    fetch(`/comments/${event.id}`)
       .then((resp) => resp.json())
       .then((data) => setCommentResults(data));
   }, []);

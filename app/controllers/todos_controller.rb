@@ -11,6 +11,11 @@ class TodosController < ApplicationController
     render json: todos, status: :ok
   end
 
+  def show
+    todos = Todo.where(event_id: params[:id])
+    render json: todos, status: :ok
+  end
+
   def update
     todo = Todo.find(params[:id])
     todo.update!(todo_params)

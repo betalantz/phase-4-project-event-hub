@@ -23,6 +23,7 @@ const AddCommentForm = ({ user, event, setCommentResults, commentResults }) => {
           },
           body: JSON.stringify(newComment),
         }).then(setCommentResults([...commentResults, newComment]));
+        
       }
     
     return (

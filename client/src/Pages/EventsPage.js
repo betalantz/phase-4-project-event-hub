@@ -23,6 +23,7 @@ const EventsPage = ({ user }) => {
 }, [])
 
 
+
   return (
     <div>
       <h1 className="events-page-header">EVENTS</h1>

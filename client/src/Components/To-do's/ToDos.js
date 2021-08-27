@@ -7,13 +7,14 @@ const ToDos = ({ event, user }) => {
     const [inputText, setInputText] = useState("");
     const [todos, setToDos] = useState([]);
 
-    const [runFetch, setRunFetch] = useState(false)
+    // const [runFetch, setRunFetch] = useState(false)
 
     useEffect(() => {
-        fetch("/todos")
+        fetch(`/todos/${event.id}`)
         .then((resp) => resp.json())
         .then((data) => setToDos(data))
-    },[runFetch]);
+        console.log(todos)
+    },[]);
 
    
 
@@ -28,7 +29,7 @@ const ToDos = ({ event, user }) => {
             event={event}
             user={user}
         />
-            <ToDoList todos={todos} event={event} user={ user} runFetch={runFetch} setRunFetch={setRunFetch}/>
+            <ToDoList todos={todos} event={event} user={user}/>
             </div>
         </div>
     );

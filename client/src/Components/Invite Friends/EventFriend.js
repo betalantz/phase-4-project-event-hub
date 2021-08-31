@@ -2,7 +2,7 @@ import React from 'react'
 import Avatar from 'react-avatar'
 
 
-const EventFriend = ({friend, handleInviteFriend, attendees, setAttendees, event, user}) => {
+const EventFriend = ({friend, attendees, setAttendees, event, user}) => {
 
     const newAttendee = {
         name: friend.name,

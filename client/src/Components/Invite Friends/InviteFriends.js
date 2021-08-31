@@ -13,7 +13,7 @@ const InviteFriends = ({ event, user }) => {
 
 
     useEffect(() => {
-        fetch("/attendees")
+        fetch(`/attendees/`)
         .then((resp) => resp.json())
         .then((data) => setAttendees(data));
     },[]);

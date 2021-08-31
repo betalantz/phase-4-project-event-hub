@@ -22,7 +22,7 @@ const Navbar = ({ user, setUser }) => {
 
   return (
     <nav className="navBar">
-      <h1>E-Hub</h1>
+      <h1 className='logo'>E-Hub</h1>
       <ul className="nav-links">
       <li className="nav-li">
           <NavLink className="nav-link one" to="/">

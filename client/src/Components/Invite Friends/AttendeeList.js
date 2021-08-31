@@ -1,7 +1,8 @@
 import Attendee from "./Attendee"
 
-const AttendeeList = ({attendees, setAttendees}) => {
+const AttendeeList = ({attendees }) => {
 
+  
     const attendeeList = attendees.map(att => {
         return (
             <Attendee attendee={att}/>
@@ -10,6 +11,7 @@ const AttendeeList = ({attendees, setAttendees}) => {
 
 
     return (
+        
         <div>
             <h2 className='attending-header'>Attending</h2>
             <div className='attendee-list-names'>{attendeeList}</div>

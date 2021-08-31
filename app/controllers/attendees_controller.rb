@@ -11,6 +11,11 @@ class AttendeesController < ApplicationController
     render json: attendees, status: :ok
   end
 
+  # def show
+  #   attendees = Attendee.find_by(event_id: params[:id])
+  #   render json: attendees
+  # end
+
   private
 
   def attendee_params

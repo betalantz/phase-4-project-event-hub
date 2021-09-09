@@ -4,6 +4,7 @@ import CommentsList from "../Comments/CommentsList";
 import ToDos from "../To-do's/ToDos";
 import InviteFriends from "../Invite Friends/InviteFriends";
 import { useEffect, useState } from "react";
+import "@formatjs/intl-datetimeformat/polyfill-force";
 import "@formatjs/intl-datetimeformat/locale-data/en";
 import "./EventCardDetails.css"
 import { FaTimes, FaChevronRight } from "react-icons/fa";
